@@ -42,7 +42,8 @@ export default [
     external: ['lodash'],
     output: {
       file: pkg.main,
-      format: 'cjs'
+      format: 'cjs',
+      sourcemap: true
     },
     plugins: [
       localResolve(),
@@ -64,7 +65,8 @@ export default [
     external: ['lodash'],
     output: {
       file: pkg.module,
-      format: 'es'
+      format: 'es',
+      sourcemap: true
     },
     plugins: [
       commonjs(), // so Rollup can transform dependencies in CommonJS to ESM
